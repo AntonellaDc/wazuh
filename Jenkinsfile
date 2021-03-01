@@ -9,8 +9,7 @@ pipeline {
                 git  'https://github.com/AntonellaDc/wazuh.git'
 
                 echo 'Compile the last released version'
-		sh "chmod 777 install.sh"
-                sh "./install.sh" 
+                sh "./install.sh -q" 
             }
 
             

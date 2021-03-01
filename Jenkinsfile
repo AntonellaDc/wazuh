@@ -4,11 +4,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                // Get some code from a GitHub repository
-                git 'https://github.com/AntonellaDc/wazuh.git'
+               
+		echo 'Clone code from Github Repository'
+                git  'https://github.com/AntonellaDc/wazuh.git'
 
-                // Run install.
-		sh "sudo su"
+                echo 'Compile the last released version'
+		sh "chmod 777 install.sh"
                 sh "./install.sh" 
             }
 
